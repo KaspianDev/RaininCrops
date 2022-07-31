@@ -1,0 +1,4 @@
+name: RaininCrops
+version: '${version}'
+main: com.github.kaspiandev.rainincrops.RaininCrops
+api-version: 1.19
