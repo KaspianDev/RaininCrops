@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.github.kaspiandev'
-version = '1'
+version = '2'
 
 repositories {
     mavenCentral()

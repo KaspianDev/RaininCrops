@@ -22,8 +22,10 @@ public final class RaininCrops extends JavaPlugin implements Listener {
     }
 
     @EventHandler @SuppressWarnings("ConstantConditions")
-    public void onWeather(WeatherChangeEvent event, WeatherType type, World world) {
-        if (type == WeatherType.DOWNFALL) {
+    public void onWeather(WeatherChangeEvent event) {
+        World world = event.getWorld();
+        boolean isClear = world.isClearWeather();
+        if (!isClear) {
             int newRTS;
             if (world.getGameRuleValue(GameRule.RANDOM_TICK_SPEED) == null) {
                 newRTS = 6;
